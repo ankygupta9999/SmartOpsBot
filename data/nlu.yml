@@ -1,6 +1,11 @@
 version: "2.0"
 
 nlu:
+
+- regex: invoice_nbr
+  examples: |
+    - (SI)[0-9]{9}\s
+
 - intent: greet
   examples: |
     - hey
@@ -90,3 +95,7 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: payment_info
+  examples: |
+    - your account is past due for the below invoices. Please provide payment information as soon as possible. The invoice number is [SI5102332]{"entity":"invoice_nbr"}. Regards, \n [ABC Solutions]{"entity":"vendor_name"}
+    - hi, There is a due reflecting on you account due to invoice [SI5102331]{"entity":"invoice_nbr"}. kindly share the payment information at the earliest. Thanks, \n [XYZ Solutions]{"entity":"vendor_name"}

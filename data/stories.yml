@@ -2,6 +2,11 @@ version: "2.0"
 
 stories:
 
+- story: payment info check
+  steps:
+  - intent: payment_info
+  - action: utter_paymentinfo
+
 - story: happy path
   steps:
   - intent: greet
