@@ -6,6 +6,34 @@ nlu:
   examples: |
     - (SI)[0-9]{9}\s
 
+- intent: chitchat/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+- intent: chitchat/howisbot
+  examples: |
+    - How are you doing?
+    - How are you?
+    - How about you?
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+    - I like sunny days in India/US.
+
+- intent: bot_capability
+  examples: |
+    - what can you do?
+    - what are you capable of?
+    - what all can you do?
+    - how can you help me?
+    - what do you know?
+    - do you know anything?
+    - you don't know anything
+
 - intent: greet
   examples: |
     - hey

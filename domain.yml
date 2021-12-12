@@ -8,11 +8,17 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - chitchat
   - payment_info
 
 entities:
    - invoice_nbr
    - vendor_name
+
+slots:
+  invoice_nbr:
+    type: text
+    influence_conversation: false
 
 responses:
   utter_greet:
@@ -33,9 +39,43 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_chitchat/greet:
+  - text: Hello there, what can I help you with today?
+  - text: Hey, How are you doing?
+  utter_chitchat/howisbot:
+  - text: I am doing good. Thanks!
+  - text: I am great :) Thanks!
+  utter_chitchat/ask_name:
+  - image: https://i.imgur.com/zTvA58i.jpeg
+    text: Hello, my name is UDE Bot.
+  - text: I am called UDE Bot!
+  utter_chitchat/ask_weather:
+  - image: https://i.imgur.com/vwv7aHN.png
+    text: Oh, it does look sunny right now.
+  - text: I am not sure of the whole week but I can see the sun is out today.
 
   utter_paymentinfo:
   - text: "Here is the status of your invoice..."
+
+  utter_ask_invoice_nbr:
+  - text: Enter the 9 CHAR INVOICE number to check the status (Ex SI1231231)
+
+  utter_processing:
+  - text: Request is being processed...
+
+  utter_inv_details:
+  - text: 'Here are the details for the INVOICE - {invoice_nbr} : {invdata}'
+
+actions:
+- action_get_inv_details
+- action_reset_all_slots
+
+forms:
+  inv_form:
+    invoice_nbr:
+    - type: from_text
 
 session_config:
   session_expiration_time: 60

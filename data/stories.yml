@@ -5,7 +5,15 @@ stories:
 - story: payment info check
   steps:
   - intent: payment_info
-  - action: utter_paymentinfo
+  - action: action_reset_all_slots
+  - action: inv_form
+  - active_loop: inv_form
+  - active_loop: null
+  - action: action_get_inv_details
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: action_reset_all_slots
 
 - story: happy path
   steps:
