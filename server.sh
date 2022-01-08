@@ -9,4 +9,4 @@ then
 fi
 
 # Start rasa server with nlu model
-rasa run --enable-api --cors "*" -p $PORT --debug
+rasa run --enable-api --cors "*" -p 5005 --debug
