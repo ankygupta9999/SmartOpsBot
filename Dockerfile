@@ -7,8 +7,8 @@ USER root
 RUN chmod -R 777 /app
 USER 1001
 
-RUN python -m venv /opt/venv && \
-  . /opt/venv/bin/activate 
+# RUN python -m venv /opt/venv && \
+#   . /opt/venv/bin/activate 
 
 # make sure we use the virtualenv
 ENV PATH="/opt/venv/bin:$PATH"
