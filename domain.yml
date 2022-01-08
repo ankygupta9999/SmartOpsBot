@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - bot_capability
   - chitchat
   - payment_info
 
@@ -19,6 +20,13 @@ slots:
   invoice_nbr:
     type: text
     influence_conversation: false
+    # auto_fill: true
+  vendor_name:
+    type: text
+    influence_conversation: false
+  # requested_slot:
+  #   type: unfeaturized
+  #   influence_conversation: false
 
 responses:
   utter_greet:
@@ -60,23 +68,35 @@ responses:
   - text: "Here is the status of your invoice..."
 
   utter_ask_invoice_nbr:
-  - text: Enter the 9 CHAR INVOICE number to check the status (Ex SI1231231)
+  - text: |
+      I can surely help. 
+      Enter the 9 CHAR INVOICE number to check the status (Ex SI1231231)
+  - text: Sure, Kindly enter the 9 CHAR INVOICE number which is reflecting due. (Ex. SI1231231)
 
   utter_processing:
   - text: Request is being processed...
 
   utter_inv_details:
-  - text: 'Here are the details for the INVOICE - {invoice_nbr} : {invdata}'
+  - text: |
+      Here are the details for the INVOICE - {invoice_nbr} : 
+        {invdata}'
 
 actions:
 - action_get_inv_details
 - action_reset_all_slots
+- validate_inv_form
 
 forms:
   inv_form:
-    invoice_nbr:
-    - type: from_text
+    required_slots:
+      invoice_nbr:
+      - type: from_entity
+        entity: invoice_nbr
+      # - type: from_text
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+# config:
+#   store_entities_as_slots: true

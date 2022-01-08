@@ -21,3 +21,23 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_please_rephrase
+
+- rule: payment_info_check form
+  steps:
+  - intent: payment_info
+  - action: inv_form
+  - active_loop: inv_form
+  
+- rule: payment_info_check form submit
+  condition:
+  - active_loop: inv_form
+  steps:
+  - action: inv_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_get_inv_details
+  - action: action_reset_all_slots
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy    

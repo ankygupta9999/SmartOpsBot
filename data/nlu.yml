@@ -72,6 +72,9 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok
+    - okies
+    - sure
 
 - intent: deny
   examples: |
@@ -123,7 +126,16 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    
 - intent: payment_info
   examples: |
-    - your account is past due for the below invoices. Please provide payment information as soon as possible. The invoice number is [SI5102332]{"entity":"invoice_nbr"}. Regards, \n [ABC Solutions]{"entity":"vendor_name"}
+    - your account is past due for the below invoices. Please provide payment information as soon as possible. The invoice number is [SI1231231]{"entity":"invoice_nbr"}. Regards, \n [ABC Solutions]{"entity":"vendor_name"}
     - hi, There is a due reflecting on you account due to invoice [SI5102331]{"entity":"invoice_nbr"}. kindly share the payment information at the earliest. Thanks, \n [XYZ Solutions]{"entity":"vendor_name"}
+    - There is an invoice causing the account to reflect in past due. Kindly share the payment information for invoice number [SI5102331]{"entity":"invoice_nbr"}.
+    - Need the payment information for invoice [SI5102331]{"entity":"invoice_nbr"}. This is resulting in account being reflecting due.
+    - The account is past due for an invoice. Please tell the payment information for invoice number [SI5102331]{"entity":"invoice_nbr"}.
+    - Hey, your account is past due for the below invoices. Please provide payment information on these at the earliest. The invoice nbr is [SI1231231]{"entity":"invoice_nbr"}. Regards, \n [ABC Solutions]{"entity":"vendor_name"}
+    - hi, There is a due reflecting on you account due to invoice [SI5102331]{"entity":"invoice_nbr"}. kindly share the payment information. Thanks, [XYZ Solutions]{"entity":"vendor_name"}
+    - There is an invoice causing the account to reflect in past due. Kindly process the invoice number [SI5102331]{"entity":"invoice_nbr"}, if not done already.
+    - The payment information for invoice [SI2233221]{"entity":"invoice_nbr"} is needed on priority as this is resulting in account due.
+    - The account is past due due to some invoices. Please tell the payment information for invoice number [SI2233221]{"entity":"invoice_nbr"}.    
