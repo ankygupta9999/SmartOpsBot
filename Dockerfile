@@ -17,9 +17,10 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN python -m pip install spacy
 RUN python -m spacy download en_core_web_sm
 
-
 RUN chmod -R 777 /app
 USER 1001
+
+EXPOSE 5005
 
 RUN rasa train nlu
 ENTRYPOINT ["/app/server.sh"]
