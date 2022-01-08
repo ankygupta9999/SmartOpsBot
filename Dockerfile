@@ -22,5 +22,5 @@ USER 1001
 
 EXPOSE 5005
 
-RUN rasa train nlu
+# RUN rasa train nlu
 ENTRYPOINT ["/app/server.sh"]
