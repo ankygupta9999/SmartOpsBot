@@ -3,7 +3,7 @@ FROM rasa/rasa:2.8.13
 COPY app /app
 COPY server.sh /app/server.sh
 
-RUN pip install spacy
+RUN python -m pip install spacy
 RUN python -m spacy download en_core_web_sm
 
 USER root
