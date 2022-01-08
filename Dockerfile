@@ -7,7 +7,7 @@ USER root
 RUN chmod -R 777 /app
 USER 1001
 
-RUN pip3 install spacy --user 
+RUN sudo pip install spacy  
 RUN python -m spacy download en_core_web_sm
 
 RUN rasa train nlu
