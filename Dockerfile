@@ -13,8 +13,8 @@ USER 1001
 # make sure we use the virtualenv
 ENV PATH="/opt/venv/bin:$PATH"
 
-RUN python -m pip install spacy
-RUN python -m spacy download en_core_web_sm
+RUN sudo python -m pip install spacy
+RUN sudo python -m spacy download en_core_web_sm
 
 RUN rasa train nlu
 ENTRYPOINT ["/app/server.sh"]
