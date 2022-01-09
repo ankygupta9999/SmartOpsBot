@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smartopsbot
+spec:
+  selector:
+    matchLabels:
+      app: smartopsbot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: smartopsbot
+    spec:
+      containers:
+      - name: smartopsbot
+        image: ankygupta9999/smartbot:initial
+        ports:
+        - containerPort: 5005
