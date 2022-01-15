@@ -32,17 +32,17 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! 😊 How are you?"
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Here is something to cheer you up 😊:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
   utter_did_that_help:
   - text: "Did that help you?"
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great 😊, carry on!"
   utter_goodbye:
-  - text: "Bye"
-  - text: "Bbye. Have a good one :)"
+  - text: "Bye 👋"
+  - text: "Bbye 👋. Have a good one :)"
   utter_handle_abuse:
   - text: It is unfortunate 🤔 to know that you are not happy with me. God bless us all!
   utter_iamabot:
@@ -50,14 +50,17 @@ responses:
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_cosmetics_faq/where:
-  - text: I can help you with that. Balaji Cosmetics corner provides all latest and best quality cosmetics products.
-  - text: Yes! Balaji Cosmetics in Sector 7 Faridabad provides all latest and best quality cosmetics products.
+  - text: I can help you with that. Balaji Cosmetics Corner 💅 in Sec 7 Faridabad, provides all latest and best quality cosmetics products.
+  - text: Yes! Balaji Cosmetics 💅 in Sector 7 Faridabad | They provide all latest and best quality cosmetics products.
   utter_cosmetics_faq/capacity:
-  - text: Balaji Cosmetics corner has all major brands and non-branded good quality products available!
-  - text: Balaji Cosmetics corner is a reputed seller and has almost all related products available!
+  - text: Balaji Cosmetics corner 💅 has all major brands and non-branded good quality products available!
+  - text: Balaji Cosmetics corner 💅 is a reputed seller and has almost all related products available!
   utter_cosmetics_faq/howtoreach:
   - text: Here is the google map location; 
-    image: https://goo.gl/maps/nBCpD9TLfcLDjfZB7
+    buttons:
+    - title: Balaji Cosmetics Corner
+      payload: https://goo.gl/maps/nBCpD9TLfcLDjfZB7
+
   utter_chitchat/greet:
   - text: Hello there, what can I help you with today?
   - text: Hey, How are you doing?
