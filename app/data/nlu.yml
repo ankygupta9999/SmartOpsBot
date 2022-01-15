@@ -42,6 +42,7 @@ nlu:
     - How can I reach there?
     - How can I reach Balaji cosmetics ?
     - can you show google maps for that cosmetics shop?
+    - can you suggest any nearby cosmetics shop?
 - intent: bot_capability
   examples: |
     - what can you do?

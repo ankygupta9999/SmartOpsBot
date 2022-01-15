@@ -50,16 +50,19 @@ responses:
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_cosmetics_faq/where:
-  - text: I can help you with that. Balaji Cosmetics Corner 💅 in Sec 7 Faridabad, provides all latest and best quality cosmetics products.
-  - text: Yes! Balaji Cosmetics 💅 in Sector 7 Faridabad | They provide all latest and best quality cosmetics products.
+  - text: |
+      I can help you with that. 
+      Balaji Cosmetics Corner 💅 in Sec 7 Faridabad, provides all latest and best quality cosmetics products.
+  - text: |
+      Yes! 
+      Balaji Cosmetics 💅 in Sector 7 Faridabad | They provide all latest and best quality cosmetics products.
   utter_cosmetics_faq/capacity:
   - text: Balaji Cosmetics corner 💅 has all major brands and non-branded good quality products available!
   - text: Balaji Cosmetics corner 💅 is a reputed seller and has almost all related products available!
   utter_cosmetics_faq/howtoreach:
-  - text: Here is the google map location; 
-    buttons:
-    - title: Balaji Cosmetics Corner
-      payload: https://goo.gl/maps/nBCpD9TLfcLDjfZB7
+  - text: |
+      Here is the google map location; 
+      [Balaji Cosmetics Corner](https://goo.gl/maps/nBCpD9TLfcLDjfZB7)
 
   utter_chitchat/greet:
   - text: Hello there, what can I help you with today?
