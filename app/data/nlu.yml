@@ -24,6 +24,24 @@ nlu:
     - Oh, do you mind checking the weather for me please?
     - I like sunny days in India/US.
 
+- intent: cosmetics_faq/where
+  examples: |
+    - Can you suggest any good cosmetics shop in Faridabad?
+    - Can you suggest any good cosmetics shop in Sector 7 Faridabad?
+    - Find a good cosmetics shop for me in Faridabad?
+    - I am looking for good cosmetics shop?
+    - Do you know any good girls cosmetics shop in Faridabad?
+- intent: cosmetics_faq/capacity
+  examples: |
+    - what all items does they provide?
+    - what all cosmetics products they have?
+    - can i find all girls or women cosmetics there?
+    - Do they have creams, clutcher etc?
+- intent: cosmetics_faq/howtoreach
+  examples: |
+    - How can I reach there?
+    - How can I reach Balaji cosmetics ?
+    - can you show google maps for that cosmetics shop?
 - intent: bot_capability
   examples: |
     - what can you do?
@@ -33,6 +51,18 @@ nlu:
     - what do you know?
     - do you know anything?
     - you don't know anything
+
+- intent: handle_abuse
+  examples: |
+    - you fucker
+    - you are an ass hole...
+    - kutte
+    - kamine
+    - nalayak
+    - go to hell
+    - what the hell do you think of yourself.
+    - are you mad
+    - you are crazy
 
 - intent: greet
   examples: |

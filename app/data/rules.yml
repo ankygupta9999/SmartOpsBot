@@ -12,10 +12,20 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: respond to balaji cosmetics faq
+  steps:
+  - intent: cosmetics_faq
+  - action: utter_cosmetics_faq
+
 - rule: respond to chitchat
   steps:
   - intent: chitchat
   - action: utter_chitchat
+
+- rule: respond to abuse
+  steps:
+  - intent: handle_abuse
+  - action: utter_handle_abuse
 
 - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:
